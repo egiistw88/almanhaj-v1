@@ -1,64 +1,102 @@
-# Al-Manhaj Knowledge System
+# Al-Manhaj: Zettelkasten & Second Brain Terotomasi
 
-**Versi:** 1.0.0 (Release)  
-**Tumpukan Teknologi Utama:** React 18, Vite, Express (Backend), Tailwind CSS, Supabase (PostgreSQL), Tiptap Editor, OpenRouter AI.
+**Versi:** 1.0.0 (Production-Ready)  
+**Lisensi:** Terbuka (Open Source)
 
-Al-Manhaj adalah sistem manajemen pustaka dan jaringan pemikiran empirik (Zettelkasten) yang dirancang khusus untuk mewadahi kerangka berpikir cendekiawan dan penuntut ilmu (akademis maupun dirasah Islamiyah). Dibangun dengan arsitektur visual "*Negative Space*" dan prinsip "Zen" yang minim distraksi.
-
-## 🌟 Tiga Pilar Fitur Cerdas (AI Terintegrasi)
-Aplikasi ini beroperasi lebih dari sekadar buku catatan, tetapi bertindak sebagai pendamping analitis (_copilot_) Anda:
-
-1. **Munaqisy Engine (Uji Argumen Intelektual):** Bertindak sebagai lawan debat (*Devil's Advocate*) di dalam Editor Catatan. Sorot teks argumen Anda, lalu klik "Uji Argumen". AI akan mencari celah logika (logical fallacy) atau memberikan konter-fakta kritis (Socratic Method) untuk mempertajam kualitas pemikiran Anda.
-2. **Arsitek Kurikulum (Mutaba'ah Planner):** Masukkan target besar (misal: "Khatam Syarah Arbain Nawawi dalam 2 Minggu"). AI akan mendekonstruksi target abstrak tersebut menjadi rincian *roadmap* yang realistis dan terukur menjadi langkah-langkah *to-do list* harian Anda.
-3. **Murobbi AI (Spaced Repetition & Recall):** Terdapat widget di Dasbor Utama yang membangkitkan ingatan Anda atas arsip catatan yang sudah lama tenggelam. Murobbi AI tidak sekadar bertanya definisi, melainkan memikirkan satu pertanyaan pemantik tingkat tinggi (HOTS) yang memaksa sintesa ulang pengetahuan.
-
-## 🕸️ Fitur Inti Kelola Pengetahuan (Zettelkasten)
-- **Inkibator (Penangkap Kilat):** Wadah pemikiran/ide sementara yang melintas cepat. Terdapat asisten AI "Jernihkan Silogisme" yang membantu merapikan diksi yang ruwet agar siap dijadikan catatan permanen.
-- **Pustaka (Repositori Referensi):** Manajemen literatur (Kitab, Buku, Jurnal) yang menjadi pondasi kuat penahan rujukan setiap ide Anda. Memiliki fitur identifikasi AI jika informasi penulis kosong.
-- **Jaring Saraf (*Bidirectional Linking*):** Gunakan sintaks `[[Judul Catatan]]` di dalam editor untuk menautkan satu konsep dengan kerangka konsep lainnya. Panel Dashboard Munaqisy akan menampilkan *backlinks* secara real-time. Terdapat pula **Saraf Semantik API** yang bisa memindai isi catatan dan merekomendasikan interkoneksi dengan catatan sebelumnya.
+Al-Manhaj adalah sistem *Visual Second Brain* (Zettelkasten) yang dirancang khusus bagi para akademisi, cendekiawan, dan penuntut ilmu (Dirasah Islamiyah). Al-Manhaj memadukan ketenangan ruang *Negative Space* dengan kekuatan Saraf Semantik AI untuk memastikan setiap gagasan, kutipan, dan catatan pembelajaran Anda tidak menjadi kuburan data, melainkan berjalinan menjadi struktur pengetahuan yang kokoh dan aplikatif.
 
 ---
 
-## 🛠 Instalasi dan Deployment Lokal
+## 🌟 Fitur Inti (Core Features)
 
-Di lingkungan lokal, sistem ini memerlukan backend Express bawaan untuk menutupi eksekusi kunci API (*OpenRouter*) sebagai _proxy_ agar aman dari paparan publik.
+### 1. Zettelkasten Murni & Pencegahan Distorsi
+- **Kotak Inkubasi:** Tangkap ide mentah dengan cepat. Biarkan ide "masak" sebelum dipromosikan (arsip) menjadi catatan permanen ilmiah.
+- **Topologi Peta Pengetahuan (Graph View):** Visualisasi relasi ide menggunakan teknologi rendering interaktif (D3.js). Sistem secara otomatis mengaitkan ide (_bidirectional linking_) dari format `[[Judul Target]]`.
+- **Sistem Anti "Catatan Yatim" (Orphaned Notes Guard):** Deteksi dan saring catatan yang tidak memiliki minimum 1 tautan (0 connections) ke catatan lain untuk mencegah fragmen informasi yang tewas (dead-end knowledge).
 
-### 1. Kloning Repositori
+### 2. Munaqisy AI Engine (Penguji Kesahihan)
+Lebih dari sekadar buku digital, AI (OpenRouter) ditanamkan untuk mensimulasikan sidang tertutup terhadap tesis Anda:
+- **Uji Argumen (Devil's Advocate):** Mendeteksi cacat logika (logical fallacy) dari argumen.
+- **Restriksi Teologi Absolut:** (*Prompt System Tuning* tingkat tinggi). AI dilarang keras menggunakan standar sekuler untuk mendebat validitas literatur *Qat'i* (wahyu/hadits mutawatir), dan secara ketat hanya akan menguji validitas *Istinbath* (penarikan kesimpulan) dan *Qiyas* (analogi) dari penulis.
+
+### 3. Keamanan Data Psikis & Pragmatis (Zero Lock-In)
+- **Ekspor Mandiri Massal:** Anda memegang kendali penuh 100% terhadap harta karun pemikiran Anda. Ekspor seluruh *database* secara instan ke dalam zip berisikan fail **Markdown murni (.md)** (dilengkapi YAML *frontmatter* metadata). Anda bebas migrasi kapan saja ke Obsidian, Logseq, atau ekosistem *offline* lain. Sistem menggunakan `JSZip` dan `FileSaver`.
+
+### 4. Manajemen Kurikulum (Mutaba'ah)
+- Rencanakan tahapan pembelajaran buku/tuntunan dengan tugas tersetruktur, bilah progresif visual, dan *milestone* penanda (*tracking*).
+
+---
+
+## 🛠 Tumpukan Teknologi (Tech Stack)
+
+Aplikasi dibangun modern dengan standar _Local-First_ & *Cloud Sync*:
+* **Frontend:** React 18, React Router v6, TypeScript Strict.
+* **Styling/UI:** Tailwind CSS v3, Konsep *Mental Canvas* (Lucide Icons).
+* **State Management & Offline Support:** Zustand dengan adaptasi sinkronisasi mutakhir ke *local state*.
+* **Database & BaaS:** Supabase (PostgreSQL 15), dengan relasi Foreign Keys kokoh.
+* **AI Provider:** OpenRouter API (Agnostik LLM) terisolasi di sisi Server (Express Backend Middleware).
+
+---
+
+## 🚀 Panduan Instalasi (Development & Deployment)
+
+**Syarat Prasyarat:**
+1. Node.js (v18+)
+2. Akun Supabase (Database kosong / *Project* baru)
+3. Akun OpenRouter (API Key)
+
+### 1. Kloning & Persiapan Modul
 ```bash
-git clone <URL_REPOSITORI_ANDA>
+git clone <URL_REPOSITORI_ANDA> al-manhaj
 cd al-manhaj
-```
-
-### 2. Instalasi Dependensi
-```bash
 npm install
 ```
 
-### 3. Konfigurasi Variabel Lingkungan (Environment)
-Aplikasi menggunakan **Supabase SQL** untuk database dan **OpenRouter** untuk tenaga mesin kecerdasan buatan. Salin bentuk di bawah ini ke dalam berkas mandiri `.env.local`:
+### 2. Konfigurasi Variabel Environment (`.env.local`)
+Buat fail lingkungan tersembunyi berdasar templat bawaan:
 ```env
-# OpenRouter Token (Untuk mengakses AI)
-OPENROUTER_API_KEY=ur_openrouter_token
+# OpenRouter API untuk Munaqisy Engine (Opsional)
+OPENROUTER_API_KEY=sk-or-v1-xxx-xxx
 
-# Supabase Auth & DB
-VITE_SUPABASE_URL=https://[YOUR_SUPABASE_ID].supabase.co
-VITE_SUPABASE_ANON_KEY=[YOUR_SUPABASE_ANON_KEY]
+# Kredensial Akses Database Supabase
+VITE_SUPABASE_URL=https://xxxxxxxxxxxxxxxxx.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR....
 ```
-*(Catatan: Anda wajib mengeksekusi migrasi Supabase di berkas `supabase/migrations/20241015_almanhaj_v1.sql` menggunakan fitur SQL Editor pada dashboar Supabase agar tabel schema langsung tereksekusi).*
 
-### 4. Nyalakan Reaktor
+### 3. Basis Data (Supabase SQL Migration)
+Jalankan fail migrasi DDL yang berada di dalam folder `supabase/migrations/` pada **SQL Editor** yang terdapat pada *dashboard* Supabase Anda. Seluruh skema (tabel, RLS, kaitan *note_links*) akan ter-bangun seketika.
+
+### 4. Aktivasi Server Pembangunan (Dev Server)
+Aplikasi di-rancang dengan konfigurasi _full-stack_ (Express + Vite) terpadu:
 ```bash
 npm run dev
 ```
-Bermuara di `http://localhost:3000`.
+Akses layar utama dari peramban (browser) di URL: `http://localhost:3000`.
 
 ---
 
-## 🏛 Filosofi Desain Antarmuka
+## 📂 Tata Letak Direktori (Project Structure)
 
-Aplikasi dibangun dari nol dengan menolak estetika bawaan *generative framework* standar. Kami memilih warna jelaga `zinc-950` dan aksen `emerald-500` yang memberikan kesejukan bagi retina mata (Dark Mode murni). Font menggunakan `Cinzel` untuk kesan agung pada judul tulisan, dan `Montserrat` / `Inter` sebagai tulang punggung visibilitas pembacaan naskah yang panjang.
-
-Tidak ada *sidebar* menetap. Semuanya diciptakan untuk bersembunyi sembari menyisakan luas pikiran untuk bernapas dalam mengisi setiap lekuk referensi empirik.
+```text
+al-manhaj/
+├── src/
+│   ├── components/  # Modul antar muka global (Cards, Modals, Editor)
+│   ├── lib/         # Layanan pusat (Zustand store, Supabase client, Parser)
+│   ├── pages/       # Rute Halaman (Dashboard, Inkubasi, Peta, dsb)
+│   ├── types/       # Definisi Database (TypeScript Interfaces)
+│   ├── index.css    # Penyesuaian Tailwind (Theming & Font Import)
+│   └── main.tsx     # Reaktor Akar
+├── server.ts        # Node.js Server (Proxy OpenRouter & Vite dev-server)
+├── docs/            # Dokumen arsitektur teknis lebih mendalam
+└── package.json     # Manuskrip Manajer Paket
+```
 
 ---
-_“Ikatlah ilmu dengan menulisnya.” — As-Silsilah_
+
+## 🛡 Keamanan Arsitektur Data
+- **Data Rahasia:** Kami mengamankan paparan kunci OpenRouter API dengan pemrosesan _server-side_ murni menggunakan server Express. Akses AI terjadi dari sisi Peladen, bukan di Klien (browser) secara serampangan.
+- **Isolasi Koneksi:** Penalian logika AI secara sadar disensor agar menghargai ruang pribadi karya Zettelkasten lokal pengguna tanpa menimbun (*scraping*) untuk melatih LLM komersil.
+
+---
+
+> *"Seburuk-buruknya ingatan adalah sebaik-baiknya tinta. Namun sebaik-baiknya tinta yang tak memiliki persambungan makna, adalah lautan kertas yang bisu."* — **Al-Manhaj Knowledge Base Architecture**.
